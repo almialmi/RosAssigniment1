@@ -1,0 +1,8 @@
+prefix=/home/almaz/model_editor_models/arm_ws/install
+
+Name: armdescription
+Description: Description of armdescription
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
