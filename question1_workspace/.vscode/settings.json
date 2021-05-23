@@ -1,0 +1,12 @@
+{
+    "ros.distro": "melodic",
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "files.associations": {
+        "string": "cpp",
+        "iostream": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp"
+    }
+}

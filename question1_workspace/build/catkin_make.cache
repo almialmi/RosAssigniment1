@@ -1,0 +1,2 @@
+question1
+-DCATKIN_DEVEL_PREFIX=/home/abel/Documents/School Files/5/ROBOTICS/lab/RosAssigniment1/question1_workspace/devel -DCMAKE_INSTALL_PREFIX=/home/abel/Documents/School Files/5/ROBOTICS/lab/RosAssigniment1/question1_workspace/install -G Unix Makefiles
