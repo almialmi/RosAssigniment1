@@ -1,2 +1,2 @@
-arm_gazebo:arm_lib:armdescription
+arm_description:arm_gazebo:arm_lib
 -DCATKIN_DEVEL_PREFIX=/home/almaz/model_editor_models/arm_ws/devel -DCMAKE_INSTALL_PREFIX=/home/almaz/model_editor_models/arm_ws/install -G Unix Makefiles

@@ -12,7 +12,20 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  gazebo_ros
 )
+
+find_package(gazebo REQUIRED)
+
+link_directories(${GAZEBO_LIBRARY_DIRS})
+include_directories(${Boost_INCLUDE_DIR} 
+              ${catkin_INCLUDE_DIRS} 
+              ${GAZEBO_INCLUDE_DIRS} 
+              ${roscpp_INCLUDE_DIRS}
+              ${std_msgs_INCLUDE_DIRS})
+
+add_library(${PROJECT_NAME} SHARED src/controller.cpp)
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -108,7 +121,9 @@ catkin_package(
 #  LIBRARIES arm_gazebo
 #  CATKIN_DEPENDS arm_lib roscpp rospy std_msgs
 #  DEPENDS system_lib
+DEPENDS roscpp gazebo_ros arm_lib
 )
+#link_directories(${GAZEBO_LIBRARY_DIRS})
 
 ###########
 ## Build ##
@@ -116,10 +131,10 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
+#include_directories(
 # include
-  ${catkin_INCLUDE_DIRS}
-)
+ # ${catkin_INCLUDE_DIRS}
+#)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(arm_lib_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "/home/almaz/model_editor_models/arm_ws/devel/include " STREQUAL " ")
   set(arm_lib_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "/home/almaz/model_editor_models/arm_ws/devel/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/almaz/model_editor_models/arm_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /home/almaz/model_editor_models/arm_ws/devel/lib;/home/almaz/model_editor_models/arm_ws/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(arm_lib_EXPORTED_TARGETS "")
+set(arm_lib_EXPORTED_TARGETS "arm_lib_generate_messages_cpp;arm_lib_generate_messages_eus;arm_lib_generate_messages_lisp;arm_lib_generate_messages_nodejs;arm_lib_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${arm_lib_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -185,7 +185,7 @@ foreach(t ${arm_lib_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "roscpp;rospy;std_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND arm_lib_EXPORTED_TARGETS ${${arm_lib_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "arm_lib-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${arm_lib_DIR}/${extra})

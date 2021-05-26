@@ -131,7 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/almaz/model_editor_models/arm_ws/build/gtest/cmake_install.cmake")
-  include("/home/almaz/model_editor_models/arm_ws/build/armdescription/cmake_install.cmake")
+  include("/home/almaz/model_editor_models/arm_ws/build/arm_description/cmake_install.cmake")
   include("/home/almaz/model_editor_models/arm_ws/build/arm_lib/cmake_install.cmake")
   include("/home/almaz/model_editor_models/arm_ws/build/arm_gazebo/cmake_install.cmake")
 
