@@ -54,6 +54,9 @@ CMAKE_BINARY_DIR = /home/ellen/Documents/ros_assignment/arm_ws1/build
 include arm_lib/CMakeFiles/arm_lib_generate_messages_eus.dir/progress.make
 
 arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/Angles.l
+arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/pose.l
+arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/fk.l
+arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/ik.l
 arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/manifest.l
 
 
@@ -62,12 +65,30 @@ arm_lib/CMakeFiles/arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from arm_lib/Angles.msg"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg
 
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/pose.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/pose.l: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from arm_lib/pose.msg"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/fk.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/fk.l: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from arm_lib/fk.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/ik.l: /opt/ros/noetic/lib/geneus/gen_eus.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/ik.l: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp code from arm_lib/ik.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv
+
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/manifest.l: /opt/ros/noetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp manifest code for arm_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating EusLisp manifest code for arm_lib"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib arm_lib std_msgs
 
 arm_lib_generate_messages_eus: arm_lib/CMakeFiles/arm_lib_generate_messages_eus
 arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/Angles.l
+arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/msg/pose.l
+arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/fk.l
+arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/srv/ik.l
 arm_lib_generate_messages_eus: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/roseus/ros/arm_lib/manifest.l
 arm_lib_generate_messages_eus: arm_lib/CMakeFiles/arm_lib_generate_messages_eus.dir/build.make
 

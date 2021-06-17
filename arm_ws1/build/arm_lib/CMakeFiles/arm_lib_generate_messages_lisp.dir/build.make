@@ -54,6 +54,9 @@ CMAKE_BINARY_DIR = /home/ellen/Documents/ros_assignment/arm_ws1/build
 include arm_lib/CMakeFiles/arm_lib_generate_messages_lisp.dir/progress.make
 
 arm_lib/CMakeFiles/arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/Angles.lisp
+arm_lib/CMakeFiles/arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/pose.lisp
+arm_lib/CMakeFiles/arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/fk.lisp
+arm_lib/CMakeFiles/arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/ik.lisp
 
 
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/Angles.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
@@ -61,8 +64,26 @@ arm_lib/CMakeFiles/arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_ass
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Lisp code from arm_lib/Angles.msg"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg
 
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/pose.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/pose.lisp: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from arm_lib/pose.msg"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/fk.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/fk.lisp: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from arm_lib/fk.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/ik.lisp: /opt/ros/noetic/lib/genlisp/gen_lisp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/ik.lisp: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from arm_lib/ik.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv
+
 arm_lib_generate_messages_lisp: arm_lib/CMakeFiles/arm_lib_generate_messages_lisp
 arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/Angles.lisp
+arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/msg/pose.lisp
+arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/fk.lisp
+arm_lib_generate_messages_lisp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp/ros/arm_lib/srv/ik.lisp
 arm_lib_generate_messages_lisp: arm_lib/CMakeFiles/arm_lib_generate_messages_lisp.dir/build.make
 
 .PHONY : arm_lib_generate_messages_lisp

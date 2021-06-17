@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg"
-services_str = ""
+messages_str = "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg;/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg"
+services_str = "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv;/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv"
 pkg_name = "arm_lib"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

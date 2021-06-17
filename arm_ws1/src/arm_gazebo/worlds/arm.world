@@ -8,5 +8,9 @@
         <include>
             <uri>model://sun</uri>
         </include>
+        <include>
+            <uri>model://box</uri>
+            <pose>2 1 0 0 0 0</pose>
+        </include>
     </world>
 </sdf>

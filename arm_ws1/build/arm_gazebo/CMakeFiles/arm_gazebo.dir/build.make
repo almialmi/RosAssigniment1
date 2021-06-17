@@ -57,27 +57,27 @@ include arm_gazebo/CMakeFiles/arm_gazebo.dir/progress.make
 # Include the compile flags for this target's objects.
 include arm_gazebo/CMakeFiles/arm_gazebo.dir/flags.make
 
-arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o: arm_gazebo/CMakeFiles/arm_gazebo.dir/flags.make
-arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o"
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_gazebo.dir/src/control.cpp.o -c /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp
+arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o: arm_gazebo/CMakeFiles/arm_gazebo.dir/flags.make
+arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o -c /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp
 
-arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_gazebo.dir/src/control.cpp.i"
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp > CMakeFiles/arm_gazebo.dir/src/control.cpp.i
+arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.i"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp > CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.i
 
-arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_gazebo.dir/src/control.cpp.s"
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp -o CMakeFiles/arm_gazebo.dir/src/control.cpp.s
+arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.s"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp -o CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.s
 
 # Object files for target arm_gazebo
 arm_gazebo_OBJECTS = \
-"CMakeFiles/arm_gazebo.dir/src/control.cpp.o"
+"CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o"
 
 # External object files for target arm_gazebo
 arm_gazebo_EXTERNAL_OBJECTS =
 
-/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/libarm_gazebo.so: arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/libarm_gazebo.so: arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/libarm_gazebo.so: arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/libarm_gazebo.so: /opt/ros/noetic/lib/libgazebo_ros_api_plugin.so
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/libarm_gazebo.so: /opt/ros/noetic/lib/libgazebo_ros_paths_plugin.so

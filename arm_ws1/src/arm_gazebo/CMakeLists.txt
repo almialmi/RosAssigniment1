@@ -25,7 +25,7 @@ include_directories(${Boost_INCLUDE_DIR}
               ${roscpp_INCLUDE_DIRS}
               ${std_msgs_INCLUDE_DIRS})
 
-add_library(${PROJECT_NAME} SHARED src/control.cpp)
+add_library(${PROJECT_NAME} SHARED src/ikcontroller.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES} ${roscpp_LIBRARIES})
 
 
@@ -176,10 +176,10 @@ DEPENDS roscpp gazebo_ros arm_lib
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
+catkin_install_python(PROGRAMS scripts/gripper_control.py scripts/fk.py scripts/ik.py
 #   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+ )
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

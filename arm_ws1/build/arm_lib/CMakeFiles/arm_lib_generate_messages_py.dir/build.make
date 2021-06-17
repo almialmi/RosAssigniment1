@@ -54,7 +54,11 @@ CMAKE_BINARY_DIR = /home/ellen/Documents/ros_assignment/arm_ws1/build
 include arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir/progress.make
 
 arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_Angles.py
+arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py
+arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py
+arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py
 arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py
+arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py
 
 
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_Angles.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
@@ -62,14 +66,44 @@ arm_lib/CMakeFiles/arm_lib_generate_messages_py: /home/ellen/Documents/ros_assig
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG arm_lib/Angles"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg
 
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG arm_lib/pose"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV arm_lib/fk"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py: /opt/ros/noetic/lib/genpy/gensrv_py.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV arm_lib/ik"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv
+
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_Angles.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python msg __init__.py for arm_lib"
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for arm_lib"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg --initpy
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_Angles.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for arm_lib"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build/arm_lib && ../catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv --initpy
 
 arm_lib_generate_messages_py: arm_lib/CMakeFiles/arm_lib_generate_messages_py
 arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_Angles.py
+arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/_pose.py
+arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_fk.py
+arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/_ik.py
 arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/msg/__init__.py
+arm_lib_generate_messages_py: /home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages/arm_lib/srv/__init__.py
 arm_lib_generate_messages_py: arm_lib/CMakeFiles/arm_lib_generate_messages_py.dir/build.make
 
 .PHONY : arm_lib_generate_messages_py

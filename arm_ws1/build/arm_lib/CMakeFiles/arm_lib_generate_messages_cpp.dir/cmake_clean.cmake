@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/Angles.h"
+  "/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h"
+  "/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h"
+  "/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h"
   "CMakeFiles/arm_lib_generate_messages_cpp"
 )
 

@@ -19,7 +19,6 @@
 #include <arm_lib/Angles.h>
 #include <cstdlib>
 #include <math.h>
-
 namespace gazebo
 {
     class ModelPush : public ModelPlugin

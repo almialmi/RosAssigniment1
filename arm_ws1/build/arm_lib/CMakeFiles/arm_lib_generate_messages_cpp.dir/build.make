@@ -54,6 +54,9 @@ CMAKE_BINARY_DIR = /home/ellen/Documents/ros_assignment/arm_ws1/build
 include arm_lib/CMakeFiles/arm_lib_generate_messages_cpp.dir/progress.make
 
 arm_lib/CMakeFiles/arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/Angles.h
+arm_lib/CMakeFiles/arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h
+arm_lib/CMakeFiles/arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h
+arm_lib/CMakeFiles/arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h
 
 
 /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/Angles.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
@@ -62,8 +65,31 @@ arm_lib/CMakeFiles/arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assi
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from arm_lib/Angles.msg"
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib && /home/ellen/Documents/ros_assignment/arm_ws1/build/catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib -e /opt/ros/noetic/share/gencpp/cmake/..
 
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h: /opt/ros/noetic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from arm_lib/pose.msg"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib && /home/ellen/Documents/ros_assignment/arm_ws1/build/catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from arm_lib/fk.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib && /home/ellen/Documents/ros_assignment/arm_ws1/build/catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib -e /opt/ros/noetic/share/gencpp/cmake/..
+
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h: /opt/ros/noetic/lib/gencpp/gen_cpp.py
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h: /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h: /opt/ros/noetic/share/gencpp/msg.h.template
+/home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h: /opt/ros/noetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ellen/Documents/ros_assignment/arm_ws1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from arm_lib/ik.srv"
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib && /home/ellen/Documents/ros_assignment/arm_ws1/build/catkin_generated/env_cached.sh /home/ellen/anaconda3/bin/python3 /opt/ros/noetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv -Iarm_lib:/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -p arm_lib -o /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib -e /opt/ros/noetic/share/gencpp/cmake/..
+
 arm_lib_generate_messages_cpp: arm_lib/CMakeFiles/arm_lib_generate_messages_cpp
 arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/Angles.h
+arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/pose.h
+arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/fk.h
+arm_lib_generate_messages_cpp: /home/ellen/Documents/ros_assignment/arm_ws1/devel/include/arm_lib/ik.h
 arm_lib_generate_messages_cpp: arm_lib/CMakeFiles/arm_lib_generate_messages_cpp.dir/build.make
 
 .PHONY : arm_lib_generate_messages_cpp

@@ -3,5 +3,9 @@
   (:export
    "<ANGLES>"
    "ANGLES"
+   "<GRIPPERANGLES>"
+   "GRIPPERANGLES"
+   "<POSE>"
+   "POSE"
   ))
 

@@ -52,3 +52,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_gazebo" TYPE FILE FILES "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/package.xml")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm_gazebo" TYPE PROGRAM FILES "/home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo/catkin_generated/installspace/gripper_control.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm_gazebo" TYPE PROGRAM FILES "/home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo/catkin_generated/installspace/fk.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/arm_gazebo" TYPE PROGRAM FILES "/home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo/catkin_generated/installspace/ik.py")
+endif()
+

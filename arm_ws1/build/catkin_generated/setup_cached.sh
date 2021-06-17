@@ -7,7 +7,10 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH='/home/ellen/catkin_ws/devel/lib:/opt/ros/noetic/lib'
-export PKG_CONFIG_PATH='/home/ellen/catkin_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'
+export CMAKE_PREFIX_PATH="/home/ellen/Documents/ros_assignment/arm_ws1/devel:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/ellen/Documents/ros_assignment/arm_ws1/build'
-export PYTHONPATH='/home/ellen/catkin_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages:/usr/lib/python2.7/dist-packages'
+export PYTHONPATH="/home/ellen/Documents/ros_assignment/arm_ws1/devel/lib/python3/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/ellen/Documents/ros_assignment/arm_ws1/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/ellen/Documents/ros_assignment/arm_ws1/src:$ROS_PACKAGE_PATH"

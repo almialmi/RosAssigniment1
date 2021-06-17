@@ -22,7 +22,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp
+/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp
 functional
 -
 boost/bind.hpp

@@ -19,7 +19,6 @@
 #include <arm_lib/Angles.h>
 #include <cstdlib>
 #include <math.h>
-
 namespace gazebo
 {
     class ModelPush : public ModelPlugin
@@ -37,7 +36,7 @@ namespace gazebo
             {
                 int argc = 0;
                 char **argv = NULL;
-                ros::init(argc, argv, "gz_cl", ros::init_options::NoSigintHandler);
+                ros::init(argc, argv, "gz_client", ros::init_options::NoSigintHandler);
                 ROS_FATAL_STREAM("Ros is not initialized."
                                  << "Load the .. in gazebo_ros");
             }
@@ -45,23 +44,42 @@ namespace gazebo
             {
                 ROS_INFO("Starting plugin");
             }
-            // // set your PID values
-            //this->pid = common::PID(10.1, 10.01, 10.03);
+        
             std::cout << "\n\n"
                       << this->model->GetName() << "\n\n";
-            this->rosNode.reset(new ros::NodeHandle("gz_cl"));
-            ros::SubscribeOptions so = ros::SubscribeOptions::create<arm_lib::Angles>(
-                "/" + this->model->GetName() + "/pos_cmd",
+            this->rosNode.reset(new ros::NodeHandle("gz_client"));
+            ros::SubscribeOptions so = ros::SubscribeOptions::create<arm_lib::pose>(
+                "/" + this->model->GetName() + "/pose",
                 1,
                 boost::bind(&ModelPush::OnRosMsg, this, _1),
                 ros::VoidPtr(), &this->rosQueue);
+            
             this->data_pub = this->rosNode->advertise<std_msgs::String>("/data", 1000);
             this->rosSub = this->rosNode->subscribe(so);
+
+            ros::ServiceClient client = this->rosNode->serviceClient<arm_lib::ik>("new_angles");
+           
+
+           
+            if (client.call(srv))
+             {
+                  this->srv.request.actuator_pose[0] = pose[0];
+                  this->srv.request.actuator_pose[1] = pose[1];
+                  this->srv.request.actuator_pose[2] = pose[2];
+                  ROS_INFO("end_effector_pos:");
+            }
+            else
+            {
+                ROS_ERROR("Failed to call service");
+                 return 1;
+            }
+
             this->rosQueueThread = std::thread(std::bind(&ModelPush::QueueThread, this));
             this->rosDataPublishThread = std::thread(std::bind(&ModelPush::Publish, this));
             this->updateConnection = event::Events::ConnectWorldUpdateBegin(
                 std::bind(&ModelPush::OnUpdate, this));
             ROS_INFO("Finished setting up");
+
         }
 
     private:
@@ -75,7 +93,7 @@ namespace gazebo
                     std_msgs::String msg;
                     std::stringstream ss;
 
-                    double degrees[3] = {0, 0, 0};
+                    double degrees[7] = {0, 0, 0, 0, 0,0, 0, 0};
                     this->GetJointPoses(degrees);
 
                     physics::ModelState modelState = physics::ModelState(this->model);
@@ -103,15 +121,31 @@ namespace gazebo
             {
                 if (choose != 1)
                 {
-                    this->SetAngle("arm1_arm2_joint", angle[0],p,i,d);
+                    this->SetAngle("base_arm1_joint", angle[0],p,i,d);
                 }
-                if (choose != 2)
+                else if (choose != 2)
                 {
-                    this->SetAngle("arm2_arm3_joint", angle[1],p,i,d);
+                    this->SetAngle("arm1_arm2_joint", angle[1],p,i,d);
                 }
-                if (choose != 3)
+                else if (choose != 3)
                 {
-                    this->SetAngle("arm3_arm4_joint", angle[2],p,i,d);
+                    this->SetAngle("arm2_arm3_joint", angle[2],p,i,d);
+                }
+                else if (choose != 4)
+                {
+                    this->SetAngle("arm3_arm4_joint", angle[3],p,i,d);
+                }
+                else if (choose != 6)
+                {
+                    this->SetAngle("arm4_arm5_joint", angle[4],p,i,d);
+                }
+                else if (choose != 7)
+                {
+                    this->SetAngle("arm5_arm6_joint", angle[5],p,i,d);
+                }
+                else if (choose != 5)
+                {
+                    this->SetAngle("arm5_arm7_joint", angle[6],p,i,d);
                 }
             }
             else if (update_num < 4000)
@@ -120,9 +154,13 @@ namespace gazebo
             }
             else if (update_num == 4000)
             {
-                this->model->GetJoint("arm1_arm2_joint")->SetParam("fmax", 0, 0);
+                this->model->GetJoint("base_arm1_joint")->SetParam("fmax", 0, 0);
+                this->model->GetJoint("arm1_arm2_sjoint")->SetParam("fmax", 0, 0);
                 this->model->GetJoint("arm2_arm3_joint")->SetParam("fmax", 0, 0);
                 this->model->GetJoint("arm3_arm4_joint")->SetParam("fmax", 0, 0);
+                this->model->GetJoint("arm4_arm5_joint")->SetParam("fmax", 0, 0);
+                this->model->GetJoint("arm5_arm6_joint")->SetParam("fmax", 0, 0);
+                this->model->GetJoint("arm5_arm7_joint")->SetParam("fmax", 0, 0);
                 update_num = -1;
             }
             if (update_num >= 0)
@@ -143,8 +181,21 @@ namespace gazebo
                 choose = 3;
                 break;
             case 3:
+                choose = 4;
+                break;
+            case 4:
                 choose = 1;
                 break;
+            case 5:
+                choose =6 ;
+                break;
+            case 6:
+                choose =7;
+                break;
+            case 7:
+                choose =5;
+                break;
+
             }
         }
 
@@ -152,20 +203,32 @@ namespace gazebo
         void GenerateAngle()
         {
             
-            angle[0] = 60;
-            angle[1] = 60;
-            angle[2] = 60;
+            angle[0] = this->srv.response.new_angles[0];
+            angle[1] = this->srv.response.new_angles[1];
+            angle[2] = this->srv.response.new_angles[2];
+            angle[3] = this->srv.response.new_angles[3];
+            angle[4] = this->srv.response.new_angles[4];
+            angle[5] = this->srv.response.new_angles[5];
+            angle[6] = this->srv.response.new_angles[6];
         }
 
     private:
         void GetJointPoses(double degrees[])
         {
-            double p1 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
-            double p2 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
-            double p3 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
+            double p1 = physics::JointState(this->model->GetJoint("base_arm1_joint")).Position(0);
+            double p2 = physics::JointState(this->model->GetJoint("arm1_arm2_joint")).Position(0);
+            double p3 = physics::JointState(this->model->GetJoint("arm2_arm3_joint")).Position(0);
+            double p4 = physics::JointState(this->model->GetJoint("arm3_arm4_joint")).Position(0);
+            double p5 = physics::JointState(this->model->GetJoint("arm4_arm5_joint")).Position(0);
+            double p6 = physics::JointState(this->model->GetJoint("arm5_arm6_joint")).Position(0);
+            double p7 = physics::JointState(this->model->GetJoint("arm5_arm7_joint")).Position(0);
             degrees[0] = p1 * 180 / M_PI;
             degrees[1] = p2 * 180 / M_PI;
             degrees[2] = p3 * 180 / M_PI;
+            degrees[3] = p4 * 180 / M_PI;
+            degrees[4] = p4 * 180 / M_PI;
+            degrees[5] = p4 * 180 / M_PI;
+            degrees[6] = p4 * 180 / M_PI;
         }
 
     private:
@@ -173,7 +236,7 @@ namespace gazebo
         {
             if (degree >= -60 && degree <= 60)
             {
-                // std::cout << joint_name << std::endl;
+                
                 float rad = M_PI * degree / 180;
                 auto pid1 = common::PID(p,i,d);
                 std::string name = this->model->GetJoint(joint_name)->GetScopedName();
@@ -182,14 +245,11 @@ namespace gazebo
             }
         }
 
-            public : void OnRosMsg(const arm_lib::Angles::ConstPtr &msg)
+            public : void OnRosMsg(const arm_lib::pose::ConstPtr &msg)
         {
-            angle[0] = msg->arm1_arm2_joint;
-            angle[1] = msg->arm2_arm3_joint;
-            angle[2] = msg->arm3_arm4_joint;
-            p = msg->p;
-            i = msg->i;
-            d = msg->d;
+            pose[0] = msg->x;
+            pose[1] = msg->y;
+            pose[2] = msg->z;
             update_num = 0;
         }
 
@@ -204,11 +264,15 @@ namespace gazebo
         }
 
     private:
-        float angle[3] = {0, 0, 0};
+        float angle[7] = {0, 0, 0,0,0,0,0};
+    private:
+        float pose[3] = {0, 0, 0};
     private:
         float p=10;
         float i=10;
         float d=10;
+    private:
+        arm_lib::ik srv;
 
     private:
         int update_num = 0;

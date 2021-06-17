@@ -80,6 +80,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -91,6 +102,17 @@ install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -112,28 +134,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+arm_lib/CMakeFiles/arm_lib_genpy.dir/rule:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
+.PHONY : arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
+
+# Convenience name for target.
+arm_lib_genpy: arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
+
+.PHONY : arm_lib_genpy
+
+# fast build rule for target.
+arm_lib_genpy/fast:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/arm_lib_genpy.dir/build.make arm_lib/CMakeFiles/arm_lib_genpy.dir/build
+.PHONY : arm_lib_genpy/fast
 
 # Convenience name for target.
 arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
@@ -243,6 +258,21 @@ rosgraph_msgs_generate_messages_eus/fast:
 .PHONY : rosgraph_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
 arm_lib/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : arm_lib/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -303,6 +333,21 @@ rosgraph_msgs_generate_messages_nodejs/fast:
 .PHONY : rosgraph_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/rule:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/rule
+.PHONY : arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/rule
+
+# Convenience name for target.
+_arm_lib_generate_messages_check_deps_ik: arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/rule
+
+.PHONY : _arm_lib_generate_messages_check_deps_ik
+
+# fast build rule for target.
+_arm_lib_generate_messages_check_deps_ik/fast:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/build.make arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_ik.dir/build
+.PHONY : _arm_lib_generate_messages_check_deps_ik/fast
+
+# Convenience name for target.
 arm_lib/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/roscpp_generate_messages_eus.dir/rule
 .PHONY : arm_lib/CMakeFiles/roscpp_generate_messages_eus.dir/rule
@@ -346,6 +391,21 @@ std_msgs_generate_messages_nodejs: arm_lib/CMakeFiles/std_msgs_generate_messages
 std_msgs_generate_messages_nodejs/fast:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make arm_lib/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 .PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/rule:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/rule
+.PHONY : arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/rule
+
+# Convenience name for target.
+_arm_lib_generate_messages_check_deps_pose: arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/rule
+
+.PHONY : _arm_lib_generate_messages_check_deps_pose
+
+# fast build rule for target.
+_arm_lib_generate_messages_check_deps_pose/fast:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/build.make arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_pose.dir/build
+.PHONY : _arm_lib_generate_messages_check_deps_pose/fast
 
 # Convenience name for target.
 arm_lib/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
@@ -438,19 +498,19 @@ arm_lib_genlisp/fast:
 .PHONY : arm_lib_genlisp/fast
 
 # Convenience name for target.
-arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/rule:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/rule
+.PHONY : arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+_arm_lib_generate_messages_check_deps_fk: arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : _arm_lib_generate_messages_check_deps_fk
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make arm_lib/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+_arm_lib_generate_messages_check_deps_fk/fast:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/build.make arm_lib/CMakeFiles/_arm_lib_generate_messages_check_deps_fk.dir/build
+.PHONY : _arm_lib_generate_messages_check_deps_fk/fast
 
 # Convenience name for target.
 arm_lib/CMakeFiles/arm_lib_generate_messages_cpp.dir/rule:
@@ -557,21 +617,6 @@ arm_lib_gennodejs/fast:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/arm_lib_gennodejs.dir/build.make arm_lib/CMakeFiles/arm_lib_gennodejs.dir/build
 .PHONY : arm_lib_gennodejs/fast
 
-# Convenience name for target.
-arm_lib/CMakeFiles/arm_lib_genpy.dir/rule:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f CMakeFiles/Makefile2 arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
-.PHONY : arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
-
-# Convenience name for target.
-arm_lib_genpy: arm_lib/CMakeFiles/arm_lib_genpy.dir/rule
-
-.PHONY : arm_lib_genpy
-
-# fast build rule for target.
-arm_lib_genpy/fast:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_lib/CMakeFiles/arm_lib_genpy.dir/build.make arm_lib/CMakeFiles/arm_lib_genpy.dir/build
-.PHONY : arm_lib_genpy/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -580,20 +625,26 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... edit_cache"
+	@echo "... arm_lib_genpy"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... arm_lib_generate_messages"
 	@echo "... arm_lib_generate_messages_py"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
+	@echo "... test"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
+	@echo "... _arm_lib_generate_messages_check_deps_ik"
 	@echo "... rebuild_cache"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _arm_lib_generate_messages_check_deps_pose"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... list_install_components"
 	@echo "... _arm_lib_generate_messages_check_deps_Angles"
@@ -601,8 +652,7 @@ help:
 	@echo "... arm_lib_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... arm_lib_genlisp"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... test"
+	@echo "... _arm_lib_generate_messages_check_deps_fk"
 	@echo "... arm_lib_generate_messages_cpp"
 	@echo "... arm_lib_geneus"
 	@echo "... arm_lib_generate_messages_lisp"
@@ -610,8 +660,6 @@ help:
 	@echo "... arm_lib_gencpp"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... arm_lib_gennodejs"
-	@echo "... arm_lib_genpy"
-	@echo "... edit_cache"
 .PHONY : help
 
 

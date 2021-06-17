@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/control.cpp" "/home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o"
+  "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_gazebo/src/ikcontroller.cpp" "/home/ellen/Documents/ros_assignment/arm_ws1/build/arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -38,7 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_lib/msg" TYPE FILE FILES "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_lib/msg" TYPE FILE FILES
+    "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/Angles.msg"
+    "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/msg/pose.msg"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/arm_lib/srv" TYPE FILE FILES
+    "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/fk.srv"
+    "/home/ellen/Documents/ros_assignment/arm_ws1/src/arm_lib/srv/ik.srv"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

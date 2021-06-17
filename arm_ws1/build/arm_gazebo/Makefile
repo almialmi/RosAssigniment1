@@ -962,32 +962,32 @@ trajectory_msgs_generate_messages_py/fast:
 	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build.make arm_gazebo/CMakeFiles/trajectory_msgs_generate_messages_py.dir/build
 .PHONY : trajectory_msgs_generate_messages_py/fast
 
-src/control.o: src/control.cpp.o
+src/ikcontroller.o: src/ikcontroller.cpp.o
 
-.PHONY : src/control.o
+.PHONY : src/ikcontroller.o
 
 # target to build an object file
-src/control.cpp.o:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.o
-.PHONY : src/control.cpp.o
+src/ikcontroller.cpp.o:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.o
+.PHONY : src/ikcontroller.cpp.o
 
-src/control.i: src/control.cpp.i
+src/ikcontroller.i: src/ikcontroller.cpp.i
 
-.PHONY : src/control.i
+.PHONY : src/ikcontroller.i
 
 # target to preprocess a source file
-src/control.cpp.i:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.i
-.PHONY : src/control.cpp.i
+src/ikcontroller.cpp.i:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.i
+.PHONY : src/ikcontroller.cpp.i
 
-src/control.s: src/control.cpp.s
+src/ikcontroller.s: src/ikcontroller.cpp.s
 
-.PHONY : src/control.s
+.PHONY : src/ikcontroller.s
 
 # target to generate assembly for a file
-src/control.cpp.s:
-	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/control.cpp.s
-.PHONY : src/control.cpp.s
+src/ikcontroller.cpp.s:
+	cd /home/ellen/Documents/ros_assignment/arm_ws1/build && $(MAKE) -f arm_gazebo/CMakeFiles/arm_gazebo.dir/build.make arm_gazebo/CMakeFiles/arm_gazebo.dir/src/ikcontroller.cpp.s
+.PHONY : src/ikcontroller.cpp.s
 
 # Help Target
 help:
@@ -1055,9 +1055,9 @@ help:
 	@echo "... trajectory_msgs_generate_messages_py"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... src/control.o"
-	@echo "... src/control.i"
-	@echo "... src/control.s"
+	@echo "... src/ikcontroller.o"
+	@echo "... src/ikcontroller.i"
+	@echo "... src/ikcontroller.s"
 .PHONY : help
 
 
