@@ -6,6 +6,8 @@
 #include <gazebo/common/common.hh>
 #include <gazebo/common/Plugin.hh>
 #include "ros/ros.h"
+#include "arm_lib/ik.h"
+#include "arm_lib/fk.h"
 #include "ros/callback_queue.h"
 #include "ros/subscribe_options.h"
 #include <ignition/math/Vector3.hh>
